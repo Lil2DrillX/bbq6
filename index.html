@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aegis Global — HTML-формы и валидация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon"></span>
+            <span>Aegis Global</span>
+        </div>
+        <nav class="nav">
+            <a href="#hero">Главная</a>
+            <a href="#features">Преимущества</a>
+            <a href="#js-interactive">JavaScript</a>
+            <a href="#form-section">Форма</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+        <a href="#form-section" class="btn-auth">Войти/Регистрация</a>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="pulse-dot"></span>
+                    <span class="badge">ЗАДАНИЕ 8</span>
+                </div>
+                <h1>HTML-формы и валидация данных</h1>
+                <p class="hero-desc">Создание полей ввода, списков, текстовых областей и проверка корректности данных в браузере.</p>
+                <a href="#form-section" class="btn-cta">Перейти к форме</a>
+            </div>
+
+            <div class="hero-media">
+                <img src="aegis.jpg" alt="Aegis Global — Эмблема" class="floating-img">
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <span class="section-tag">ПОЧЕМУ МЫ</span>
+            <h2>Ключевые преимущества</h2>
+
+            <div class="cards-grid">
+                <article class="card animated-card">
+                    <span class="card-num">01</span>
+                    <h3>Простота</h3>
+                    <p>Понятный интерфейс для комфортной работы на любом устройстве.</p>
+                </article>
+
+                <article class="card animated-card">
+                    <span class="card-num">02</span>
+                    <h3>Надёжность</h3>
+                    <p>Стабильная сетка без поломок при изменении ширины экрана.</p>
+                </article>
+
+                <article class="card animated-card">
+                    <span class="card-num">03</span>
+                    <h3>Поддержка</h3>
+                    <p>Удобная навигация и быстрый доступ к разделам.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="js-interactive" class="js-section">
+            <span class="section-tag">ИНТЕРАКТИВ</span>
+            <h2>Демонстрация JavaScript</h2>
+
+            <div class="js-box">
+                <button id="myButton" class="btn-cta">Нажми меня</button>
+                <p id="text" class="js-text">Исходный текст блока до нажатия кнопки.</p>
+                <button onclick="changeBackground()" class="btn-auth">Изменить фон</button>
+            </div>
+        </section>
+
+        <section id="form-section" class="form-section">
+            <span class="section-tag">РЕГИСТРАЦИЯ И ОБРАТНАЯ СВЯЗЬ</span>
+            <h2>HTML-форма с валидацией</h2>
+
+            <form id="userForm" class="reg-form" action="/submit" method="post">
+                <label for="username">Имя</label>
+                <input id="username" name="username" type="text" placeholder="Введите имя" required minlength="2">
+
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com" required>
+
+                <label for="password">Пароль</label>
+                <input id="password" name="password" type="password" placeholder="Минимум 6 символов" required minlength="6">
+
+                <label for="city">Город</label>
+                <select id="city" name="city" required>
+                    <option value="">Выберите город</option>
+                    <option value="Павлодар">Павлодар</option>
+                    <option value="Астана">Астана</option>
+                    <option value="Алматы">Алматы</option>
+                </select>
+
+                <label for="comment">Комментарий</label>
+                <textarea id="comment" name="comment" rows="4" maxlength="300" placeholder="Ваш комментарий"></textarea>
+
+                <button type="submit" class="btn-submit">Отправить</button>
+                <p id="formMessage" class="form-message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacts" class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <strong class="footer-logo">Aegis Global</strong>
+                <p>Задание 8: HTML-формы и валидация данных.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Контакты</h4>
+                <p><a href="mailto:Spit.faer.03@gmail.com">Spit.faer.03@gmail.com</a></p>
+                <p><a href="tel:+77762059320">+7 (776) 205 9320</a></p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Мы в соцсетях</h4>
+                <div class="social-links">
+                    <a href="#" class="social-tag">VK</a>
+                    <a href="#" class="social-tag">TG</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Задание 8. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
